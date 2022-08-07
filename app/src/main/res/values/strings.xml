@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Random Fitness</string>
+    <string name="this_will_be_the_fitness_app">This will be the fitness app!</string>
+    <string name="this_is_the_fitness_app">This is the fitness app!</string>
+</resources>

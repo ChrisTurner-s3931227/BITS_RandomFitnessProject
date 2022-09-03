@@ -2,9 +2,59 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     tools:context=".MainActivity">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/backcolor"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName2"
+        android:layout_width="283dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="-400dp"
+        android:layout_marginTop="-10dp"
+        android:background="@null"
+        android:contentDescription="@string/name_acc"
+        android:ems="10"
+        android:fontFamily="sans-serif-thin"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintStart_toEndOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/greetingText"
+        tools:ignore="EditableContentDescCheck"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/greetingText"
+        android:layout_width="436dp"
+        android:layout_height="86dp"
+        android:layout_marginBottom="-150dp"
+        android:background="@null"
+        android:clickable="false"
+        android:contentDescription="@string/greeting_acc"
+        android:ems="10"
+        android:fontFamily="sans-serif-thin"
+        android:importantForAutofill="no"
+        android:inputType="none"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:text="@string/greeting"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/view"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="EditableContentDescCheck" />
 
     <Button
         android:id="@+id/id_welcomeButton"
@@ -18,4 +68,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

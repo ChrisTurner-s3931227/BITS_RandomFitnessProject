@@ -1,10 +1,15 @@
 <resources>
     <string name="app_name">Random Fitness</string>
     <string name="this_will_be_the_fitness_app">This will be the fitness app!</string>
-    <string name="this_is_the_fitness_app">This is the fitness app!</string>
+    <string name="ws_btn_start">Enter App</string>
     <string name="horizontal_bar">This is a horizontal bar that should have a side menu one day</string>
-    <string name="greeting">Hello,</string>
+    <string name="ws_txt_greeting">Hello,</string>
     <string name="greeting_acc">A prompt welcoming the user.</string>
-    <string name="name_acc">The Users name</string>
+    <string name="ws_txt_username">User</string>
+    <string name="sc_txt_todaysDate">Monday, \\n1st Janurary 1900</string>
+    <string name="sc_txt_totalSteps">0 steps</string>
+    <string name="sc_btn_waterIntake">Water Intake</string>
+    <string name="sc_btn_diet">Dieting</string>
+    <string name="sc_btn_calorie">Calorie Tracker</string>
 
 </resources>

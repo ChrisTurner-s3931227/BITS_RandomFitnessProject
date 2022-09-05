@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    tools:context=".MainActivity">
+    tools:context=".WelcomeScreen">
 
     <View
         android:id="@+id/view"
@@ -17,13 +17,13 @@
         tools:visibility="visible" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/id_username"
         android:layout_width="283dp"
         android:layout_height="110dp"
         android:layout_marginStart="-400dp"
         android:layout_marginTop="-10dp"
         android:background="@null"
-        android:contentDescription="@string/name_acc"
+        android:contentDescription="@string/ws_txt_username"
         android:ems="10"
         android:fontFamily="sans-serif-thin"
         android:inputType="textPersonName"
@@ -49,7 +49,7 @@
         android:marqueeRepeatLimit="marquee_forever"
         android:selectAllOnFocus="true"
         android:singleLine="true"
-        android:text="@string/greeting"
+        android:text="@string/ws_txt_greeting"
         android:textAppearance="@style/TextAppearance.AppCompat.Display3"
         android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@+id/view"
@@ -61,7 +61,7 @@
         android:layout_width="149dp"
         android:layout_height="81dp"
         android:backgroundTint="#000000"
-        android:text="@string/this_is_the_fitness_app"
+        android:text="@string/ws_btn_start"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"

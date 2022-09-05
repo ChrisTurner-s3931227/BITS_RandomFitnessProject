@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StepCounter">
+
+    <EditText
+        android:id="@+id/id_username"
+        android:layout_width="363dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:background="@null"
+        android:contentDescription="@string/ws_txt_username"
+        android:ems="10"
+        android:fontFamily="sans-serif-thin"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/greetingText"
+        tools:ignore="EditableContentDescCheck" />
+
+    <EditText
+        android:id="@+id/greetingText"
+        android:layout_width="141dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="16dp"
+        android:background="@null"
+        android:clickable="false"
+        android:contentDescription="@string/greeting_acc"
+        android:ems="10"
+        android:fontFamily="sans-serif-thin"
+        android:importantForAutofill="no"
+        android:inputType="none"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:text="@string/ws_txt_greeting"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.059"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="EditableContentDescCheck" />
+
+    <TextView
+        android:id="@+id/id_todaysDate"
+        android:layout_width="231dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/sc_txt_todaysDate"
+        android:textAlignment="center"
+        android:textColor="#4A4A4A"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_username" />
+
+    <TextView
+        android:id="@+id/id_stepCounter"
+        android:layout_width="219dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/sc_txt_totalSteps"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_todaysDate" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="121dp"
+        android:layout_height="133dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_stepCounter"
+        app:srcCompat="@drawable/runningman" />
+
+    <ImageButton
+        android:id="@+id/id_btn_calorieTracker"
+        android:layout_width="217dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="12dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/sc_btn_calorie"
+        app:layout_constraintBottom_toTopOf="@+id/id_btn_diet"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/calorie_button" />
+
+    <ImageButton
+        android:id="@+id/id_btn_waterIntake"
+        android:layout_width="219dp"
+        android:layout_height="67dp"
+        android:layout_marginBottom="24dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/sc_btn_waterIntake"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/water_button" />
+
+    <ImageButton
+        android:id="@+id/id_btn_diet"
+        android:layout_width="215dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="20dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/sc_btn_diet"
+        app:layout_constraintBottom_toTopOf="@+id/id_btn_waterIntake"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/dieting_button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

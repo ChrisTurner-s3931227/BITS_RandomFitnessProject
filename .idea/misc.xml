@@ -5,7 +5,8 @@
       <map>
         <entry key="..\:/BuildingITSystems/RandomFitness/app/src/main/res/drawable/ic_launcher_background.xml" value="0.339" />
         <entry key="..\:/BuildingITSystems/RandomFitness/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.339" />
-        <entry key="..\:/BuildingITSystems/RandomFitness/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/BuildingITSystems/RandomFitness/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/BuildingITSystems/RandomFitness/app/src/main/res/layout/activity_step_counter.xml" value="0.25" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1375" />
         <entry key="app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.1015" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.13796296296296295" />

@@ -106,7 +106,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/water_button" />
+        app:srcCompat="@drawable/hydration2" />
 
     <ImageButton
         android:id="@+id/id_btn_diet"
@@ -115,9 +115,12 @@
         android:layout_marginBottom="20dp"
         android:adjustViewBounds="true"
         android:contentDescription="@string/sc_btn_diet"
+        android:cropToPadding="false"
+        android:scaleType="center"
         app:layout_constraintBottom_toTopOf="@+id/id_btn_waterIntake"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/dieting_button" />
+        app:srcCompat="@drawable/dieting2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

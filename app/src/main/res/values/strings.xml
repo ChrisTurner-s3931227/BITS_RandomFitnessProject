@@ -11,5 +11,9 @@
     <string name="sc_btn_waterIntake">Water Intake</string>
     <string name="sc_btn_diet">Dieting</string>
     <string name="sc_btn_calorie">Calorie Tracker</string>
+    <string name="sc_txt_distance">0.00km</string>
+    <string name="ft_txt_Hello">Hello and welcome to Ranom FItness. What is your name?</string>
+    <string name="ft_txt_enterName">Your name here</string>
+    <string name="btn_Begin">Begin</string>
 
 </resources>

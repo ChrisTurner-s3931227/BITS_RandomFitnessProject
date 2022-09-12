@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#DBEAE5"
     tools:context=".StepCounter">
 
     <EditText
-        android:id="@+id/id_username"
+        android:id="@+id/id_sc_username"
         android:layout_width="363dp"
         android:layout_height="48dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="12dp"
         android:background="@null"
         android:contentDescription="@string/ws_txt_username"
         android:ems="10"
@@ -19,6 +20,7 @@
         android:inputType="textPersonName"
         android:text="Name"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
@@ -29,7 +31,7 @@
         android:id="@+id/greetingText"
         android:layout_width="141dp"
         android:layout_height="85dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="4dp"
         android:background="@null"
         android:clickable="false"
         android:contentDescription="@string/greeting_acc"
@@ -42,6 +44,7 @@
         android:singleLine="true"
         android:text="@string/ws_txt_greeting"
         android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+        android:textColor="#000000"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.059"
@@ -60,7 +63,7 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/id_username" />
+        app:layout_constraintTop_toBottomOf="@+id/id_sc_username" />
 
     <TextView
         android:id="@+id/id_stepCounter"
@@ -69,6 +72,7 @@
         android:layout_marginTop="16dp"
         android:text="@string/sc_txt_totalSteps"
         android:textAlignment="center"
+        android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -78,6 +82,7 @@
         android:id="@+id/imageView2"
         android:layout_width="121dp"
         android:layout_height="133dp"
+        android:layout_marginTop="56dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/id_stepCounter"
@@ -122,5 +127,16 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/dieting2" />
+
+    <TextView
+        android:id="@+id/id_distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sc_txt_distance"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_stepCounter" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

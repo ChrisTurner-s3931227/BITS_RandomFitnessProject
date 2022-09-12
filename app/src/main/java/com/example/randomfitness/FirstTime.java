@@ -8,31 +8,24 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class WelcomeScreen extends AppCompatActivity {
+public class FirstTime extends AppCompatActivity {
 
     public static final String EXTRA_MESSAGE = "com.example.randomfitness.MESSAGE";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        Intent intent = getIntent();
-        String name = intent.getStringExtra(FirstTime.EXTRA_MESSAGE);
-
-        TextView textView = findViewById(R.id.id_sc_username);
-        textView.setText(name);
-
-
+        setContentView(R.layout.activity_first_time);
     }
 
     public void sendMessage(View view) {
-        Intent intent = new Intent(this, StepCounter.class);
-        TextView textView = (TextView) findViewById(R.id.id_sc_username);
-        String name = textView.getText().toString();
+        Intent intent = new Intent(this, WelcomeScreen.class);
+        EditText editText = (EditText) findViewById(R.id.id_yourName);
+        String name = editText.getText().toString();
         intent.putExtra(EXTRA_MESSAGE, name);
         startActivity(intent);
     }
+
 
 
 }

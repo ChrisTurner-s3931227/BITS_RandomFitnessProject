@@ -17,28 +17,30 @@
         tools:visibility="visible" />
 
     <EditText
-        android:id="@+id/id_username"
-        android:layout_width="283dp"
-        android:layout_height="110dp"
+        android:id="@+id/id_sc_username"
+        android:layout_width="172dp"
+        android:layout_height="64dp"
         android:layout_marginStart="-400dp"
         android:layout_marginTop="-10dp"
         android:background="@null"
         android:contentDescription="@string/ws_txt_username"
         android:ems="10"
         android:fontFamily="sans-serif-thin"
+        android:importantForAutofill="no"
         android:inputType="textPersonName"
         android:text="Name"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#000000"
         app:layout_constraintStart_toEndOf="@+id/view"
         app:layout_constraintTop_toBottomOf="@+id/greetingText"
-        tools:ignore="EditableContentDescCheck"
-        android:importantForAutofill="no" />
+        tools:ignore="EditableContentDescCheck" />
 
     <EditText
         android:id="@+id/greetingText"
-        android:layout_width="436dp"
-        android:layout_height="86dp"
-        android:layout_marginBottom="-150dp"
+        android:layout_width="276dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="40dp"
         android:background="@null"
         android:clickable="false"
         android:contentDescription="@string/greeting_acc"
@@ -51,9 +53,10 @@
         android:singleLine="true"
         android:text="@string/ws_txt_greeting"
         android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+        android:textColor="#000000"
         android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/view"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="EditableContentDescCheck" />
 
     <Button
@@ -61,6 +64,7 @@
         android:layout_width="149dp"
         android:layout_height="81dp"
         android:backgroundTint="#000000"
+        android:onClick="sendMessage"
         android:text="@string/ws_btn_start"
         android:textColor="#FFFFFF"
         android:textSize="16sp"

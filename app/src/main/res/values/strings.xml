@@ -16,4 +16,27 @@
     <string name="ft_txt_enterName">Your name here</string>
     <string name="btn_Begin">Begin</string>
 
+    <string name="initialweight">Please Enter Weight</string>
+    <string name="height">Please Enter Height</string>
+    <string name="logbutton">Log</string>
+    <string name="bmi">BMI:</string>
+    <string name="goalweight">Please Enter Goal Weight</string>
+    <string name="goalrate">Please Select A Rate of Change</string>
+    <string name="weightmaintenance">Weight Maintenance kJ:</string>
+    <string name="budget">Daily kJ Budget:</string>
+    <string-array name="weightrates">
+        <item>Please Select Desired Rate</item>
+        <item>Gain 1kg per Week</item>
+        <item>Gain 0.5kg per Week</item>
+        <item>Maintain Current Weight</item>
+        <item>Lose 0.5kg per Week</item>
+        <item>Lose 1kg per Week</item>
+    </string-array>
+    <string name="confirm">Confirm</string>
+    <string name="settings">Settings</string>
+    <string name="breakfast">0</string>
+    <string name="lunch">0</string>
+    <string name="dinner">0</string>
+    <string name="snacks">0</string>
+
 </resources>

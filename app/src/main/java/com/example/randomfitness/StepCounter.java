@@ -11,6 +11,7 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
+import android.view.View;
 import android.view.WindowManager;
 import android.widget.TextView;
 
@@ -114,5 +115,10 @@ public class StepCounter extends AppCompatActivity implements SensorEventListene
             sensorMan.unregisterListener(this, mStepCounter);
         }
 
+    }
+
+    public void goToDietSettings (View view){
+        Intent intent = new Intent (this, DietSettings.class);
+        startActivity(intent);
     }
 }

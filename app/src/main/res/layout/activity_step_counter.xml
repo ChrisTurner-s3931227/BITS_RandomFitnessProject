@@ -95,6 +95,7 @@
         android:layout_marginBottom="12dp"
         android:adjustViewBounds="true"
         android:contentDescription="@string/sc_btn_calorie"
+        android:onClick="goToDietSettings"
         app:layout_constraintBottom_toTopOf="@+id/id_btn_diet"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.505"

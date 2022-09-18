@@ -14,3 +14,5 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Random Fitness"
 include ':app'
+include ':mainmodule-directory'
+

@@ -13,6 +13,8 @@ import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
@@ -27,6 +29,7 @@ public class StepCounter extends AppCompatActivity implements SensorEventListene
     private boolean stepCounterPresent;
     int stepCount = -1;
     double totalDistance = 0.00;
+    private ImageButton btnBMI, btnDiet, btnCalorie, btnWater;
 
 
 
@@ -35,17 +38,26 @@ public class StepCounter extends AppCompatActivity implements SensorEventListene
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_step_counter);
 
+        //Buttons
+        btnBMI = (ImageButton)findViewById(R.id.id_btn_bmiCalc);
+        btnDiet = (ImageButton)findViewById(R.id.id_btn_dieting);
+        btnCalorie = (ImageButton)findViewById(R.id.id_btn_calorieTracker);
+        btnWater = (ImageButton)findViewById(R.id.id_btn_waterIntake);
 
+
+
+        //Recieve intent/username
         Intent intent = getIntent();
         String name = intent.getStringExtra(WelcomeScreen.EXTRA_MESSAGE);
-
         TextView textView = findViewById(R.id.id_sc_username);
         textView.setText(name);
 
 
 
+        //Distance
         distanceDisplay = findViewById(R.id.id_distance);
 
+        //Date stuff
         Date currentTime = Calendar.getInstance().getTime();
 
         SimpleDateFormat yearf = new SimpleDateFormat("yyyy");
@@ -63,10 +75,11 @@ public class StepCounter extends AppCompatActivity implements SensorEventListene
         date.setText(String.valueOf("It is " + theDayLong + " the " + theDay +  " of " + theMonthLong + ", " + theYear));
 
 
+        //Step counter stuff
         stepCounterDisplay = findViewById(R.id.id_stepCounter);
         sensorMan = (SensorManager)getSystemService(SENSOR_SERVICE);
 
-        //Permissions, needed to get it working
+        //Permissions, needed to get step counter working
         if(sensorMan.getDefaultSensor(Sensor.TYPE_STEP_COUNTER) != null) {  //If a step is detected
             mStepCounter = sensorMan.getDefaultSensor(Sensor.TYPE_STEP_COUNTER);
             stepCounterPresent = true;
@@ -74,15 +87,14 @@ public class StepCounter extends AppCompatActivity implements SensorEventListene
         else {
             stepCounterPresent = false;
         }
-
         if(ContextCompat.checkSelfPermission(this,
                 Manifest.permission.ACTIVITY_RECOGNITION) == PackageManager.PERMISSION_DENIED){ //ask for permission
             requestPermissions(new String[]{Manifest.permission.ACTIVITY_RECOGNITION}, 0);
-
         }
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
     }
     //Permissions end
+
 
     @Override
     public void onSensorChanged(SensorEvent sensorEvent) {
@@ -117,8 +129,14 @@ public class StepCounter extends AppCompatActivity implements SensorEventListene
 
     }
 
-    public void goToDietSettings (View view){
-        Intent intent = new Intent (this, DietSettings.class);
+    //Begin activities
+    public void openBMI(View view) {
+        Intent intent = new Intent(this, DietSettings.class);
+        startActivity(intent);
+    }
+
+    public void openDiet(View view) {
+        Intent intent = new Intent(this, DietIntake.class);
         startActivity(intent);
     }
 }

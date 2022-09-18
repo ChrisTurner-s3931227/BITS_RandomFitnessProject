@@ -9,9 +9,9 @@
 
     <EditText
         android:id="@+id/id_sc_username"
-        android:layout_width="363dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="12dp"
+        android:layout_width="362dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="4dp"
         android:background="@null"
         android:contentDescription="@string/ws_txt_username"
         android:ems="10"
@@ -29,8 +29,8 @@
 
     <EditText
         android:id="@+id/greetingText"
-        android:layout_width="141dp"
-        android:layout_height="85dp"
+        android:layout_width="136dp"
+        android:layout_height="77dp"
         android:layout_marginTop="4dp"
         android:background="@null"
         android:clickable="false"
@@ -56,7 +56,7 @@
         android:id="@+id/id_todaysDate"
         android:layout_width="231dp"
         android:layout_height="58dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="40dp"
         android:text="@string/sc_txt_todaysDate"
         android:textAlignment="center"
         android:textColor="#4A4A4A"
@@ -69,7 +69,7 @@
         android:id="@+id/id_stepCounter"
         android:layout_width="219dp"
         android:layout_height="23dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:text="@string/sc_txt_totalSteps"
         android:textAlignment="center"
         android:textColor="#000000"
@@ -80,54 +80,13 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="121dp"
-        android:layout_height="133dp"
+        android:layout_width="117dp"
+        android:layout_height="117dp"
         android:layout_marginTop="56dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/id_stepCounter"
         app:srcCompat="@drawable/runningman" />
-
-    <ImageButton
-        android:id="@+id/id_btn_calorieTracker"
-        android:layout_width="217dp"
-        android:layout_height="70dp"
-        android:layout_marginBottom="12dp"
-        android:adjustViewBounds="true"
-        android:contentDescription="@string/sc_btn_calorie"
-        android:onClick="goToDietSettings"
-        app:layout_constraintBottom_toTopOf="@+id/id_btn_diet"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/calorie_button" />
-
-    <ImageButton
-        android:id="@+id/id_btn_waterIntake"
-        android:layout_width="219dp"
-        android:layout_height="67dp"
-        android:layout_marginBottom="24dp"
-        android:adjustViewBounds="true"
-        android:contentDescription="@string/sc_btn_waterIntake"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/hydration2" />
-
-    <ImageButton
-        android:id="@+id/id_btn_diet"
-        android:layout_width="215dp"
-        android:layout_height="70dp"
-        android:layout_marginBottom="20dp"
-        android:adjustViewBounds="true"
-        android:contentDescription="@string/sc_btn_diet"
-        android:cropToPadding="false"
-        android:scaleType="center"
-        app:layout_constraintBottom_toTopOf="@+id/id_btn_waterIntake"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/dieting2" />
 
     <TextView
         android:id="@+id/id_distance"
@@ -139,5 +98,70 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/id_stepCounter" />
+
+    <ImageButton
+        android:id="@+id/id_btn_calorieTracker"
+
+        android:layout_width="182dp"
+        android:layout_height="91dp"
+        android:layout_marginBottom="12dp"
+        android:background="@null"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/id_btn_waterIntake"
+        app:layout_constraintEnd_toStartOf="@+id/id_btn_dieting"
+        app:layout_constraintHorizontal_bias="0.322"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/capture2" />
+
+    <ImageButton
+        android:id="@+id/id_btn_dieting"
+        android:layout_width="182dp"
+        android:layout_height="91dp"
+        android:layout_marginEnd="16dp"
+
+        android:layout_marginBottom="12dp"
+        android:background="@null"
+        android:onClick="openDiet"
+        app:layout_constraintBottom_toTopOf="@+id/id_btn_bmiCalc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/dieting2" />
+
+    <ImageButton
+        android:id="@+id/id_btn_waterIntake"
+        android:layout_width="182dp"
+        android:layout_height="91dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="4dp"
+
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/hydration2" />
+
+    <ImageButton
+        android:id="@+id/id_btn_bmiCalc"
+        android:layout_width="182dp"
+        android:layout_height="91dp"
+        android:layout_marginBottom="4dp"
+        android:background="@null"
+        android:onClick="openBMI"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.589"
+        app:layout_constraintStart_toEndOf="@+id/id_btn_waterIntake"
+        app:srcCompat="@drawable/bmi" />
+
+    <ImageButton
+        android:id="@+id/imageButton10"
+        android:layout_width="381dp"
+        android:layout_height="63dp"
+        android:background="@null"
+        app:layout_constraintBottom_toTopOf="@+id/id_btn_dieting"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.794"
+        app:srcCompat="@drawable/overview_button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

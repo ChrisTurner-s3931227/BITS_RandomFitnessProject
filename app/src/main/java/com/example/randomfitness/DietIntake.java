@@ -5,9 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class DietIntake extends AppCompatActivity {
 
@@ -18,8 +20,12 @@ public class DietIntake extends AppCompatActivity {
 
     private TextView intake;
 
+    private boolean isInvalidNum = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getSupportActionBar().hide();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_diet_intake);
 
@@ -45,6 +51,8 @@ public class DietIntake extends AppCompatActivity {
         double lunchintake = Double.valueOf(lunch.getText().toString());
         double dinnerintake = Double.valueOf(dinner.getText().toString());
         double snackintake = Double.valueOf(snacks.getText().toString());
+
+
         double result = breakfastintake + lunchintake + dinnerintake + snackintake;
         intake.setText("Daily Intake: " + Math.round(result));
     }

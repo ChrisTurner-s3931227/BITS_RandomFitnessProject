@@ -28,8 +28,12 @@ public class DietIntake extends AppCompatActivity {
 
     ArrayAdapter arrayAdapter;
 
+    private boolean isInvalidNum = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getSupportActionBar().hide();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_diet_intake);
 

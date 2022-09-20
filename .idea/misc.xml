@@ -18,6 +18,11 @@
         <entry key="..\:/Users/lach1/OneDrive/Documents/GitHub/PM_TUE_1230_Something-Random/app/src/main/res/layout/activity_diet_settings.xml" value="0.36666666666666664" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1375" />
         <entry key="app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.1015" />
+        <entry key="app/src/main/res/drawable/roundcorner.xml" value="0.1075" />
+        <entry key="app/src/main/res/drawable/rounded_rect.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_diet_intake.xml" value="0.13020833333333334" />
+        <entry key="app/src/main/res/layout/activity_diet_settings.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_first_time.xml" value="0.13020833333333334" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.13796296296296295" />
         <entry key="app/src/main/res/layout/activity_step_counter.xml" value="0.12335359675785208" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1015" />

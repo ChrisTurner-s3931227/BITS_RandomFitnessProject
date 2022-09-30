@@ -1,6 +1,7 @@
 package com.example.randomfitness;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.utils.widget.ImageFilterButton;
 import androidx.core.content.ContextCompat;
 
 import android.Manifest;
@@ -30,7 +31,7 @@ public class StepCounter extends AppCompatActivity implements SensorEventListene
     private boolean stepCounterPresent;
     int stepCount = -1;
     double totalDistance = 0.00;
-    private ImageButton btnBMI, btnDiet, btnCalorie, btnWater;
+    private ImageButton btnBMI, btnDiet, btnCalorie, btnWater, btnCalendar;
 
 
 
@@ -46,6 +47,7 @@ public class StepCounter extends AppCompatActivity implements SensorEventListene
         btnDiet = (ImageButton)findViewById(R.id.id_btn_dieting);
         btnCalorie = (ImageButton)findViewById(R.id.id_btn_calorieTracker);
         btnWater = (ImageButton)findViewById(R.id.id_btn_waterIntake);
+        btnCalendar = (ImageButton)findViewById(R.id.id_btn_calendar);
 
 
 
@@ -140,6 +142,11 @@ public class StepCounter extends AppCompatActivity implements SensorEventListene
 
     public void openDiet(View view) {
         Intent intent = new Intent(this, DietIntake.class);
+        startActivity(intent);
+    }
+
+    public void openCalendar(View view) {
+        Intent intent = new Intent(this, CalendarEvent.class);
         startActivity(intent);
     }
 

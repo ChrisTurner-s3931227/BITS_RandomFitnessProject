@@ -142,4 +142,5 @@ public class StepCounter extends AppCompatActivity implements SensorEventListene
         Intent intent = new Intent(this, DietIntake.class);
         startActivity(intent);
     }
+
 }

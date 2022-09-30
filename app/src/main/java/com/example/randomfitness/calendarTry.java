@@ -25,7 +25,7 @@ public class calendarTry extends RecyclerView.Adapter<calendarHolder> {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         View view = inflater.inflate(R.layout.calendar_cell, parent,false);
         ViewGroup.LayoutParams layoutParams = view.getLayoutParams();
-        layoutParams.height = (int) (parent.getHeight() * 0.16666666);
+        layoutParams.height = (int) (parent.getHeight() * 0.166666666);
         return new calendarHolder(view, onItemListener);
     }
 

@@ -54,7 +54,7 @@ public class CalendarEvent extends AppCompatActivity implements calendarTry.onIt
         LocalDate firstOfMonth = selectedDate.withDayOfMonth(1);
         int dayOfWeek = firstOfMonth.getDayOfWeek().getValue();
         for(int i = 1; i <= 42; i++){
-            if(i <= dayOfWeek || i > daysInMonth){
+            if(i <= dayOfWeek || i > daysInMonth + dayOfWeek){
                 daysInMonthArray.add("");
             }
             else{

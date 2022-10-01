@@ -6,9 +6,11 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class calendarHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+public class calendarHolder<dayText> extends RecyclerView.ViewHolder implements View.OnClickListener {
     public final TextView dayOfMonth;
     private final calendarTry.onItemListener onItemListener;
+    public Object dayText;
+
     public calendarHolder(@NonNull View itemView, calendarTry.onItemListener onItemListener) {
         super(itemView);
         dayOfMonth = itemView.findViewById(R.id.cellDayText);
@@ -19,5 +21,7 @@ public class calendarHolder extends RecyclerView.ViewHolder implements View.OnCl
     @Override
     public void onClick(View v) {
         onItemListener.onItemClick(getAdapterPosition(), (String) dayOfMonth.getText());
+        final dayText dayText;
+        dayText = (dayText) dayOfMonth.getText();
     }
 }

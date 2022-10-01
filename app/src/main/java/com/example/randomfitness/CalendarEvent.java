@@ -85,9 +85,9 @@ public class CalendarEvent extends AppCompatActivity implements calendarTry.onIt
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     public void onItemClick(int position, String dayText) {
-    if(dayText.equals("")){
+    if(dayText.startsWith("")){
         String message = "Selected Date " + dayText + " " + monthYearFromDate(selectedDate);
-        Toast.makeText(this, message, Toast.LENGTH_LONG).show();
+        Toast.makeText(CalendarEvent.this, message, Toast.LENGTH_LONG).show();
     }
     }
 }

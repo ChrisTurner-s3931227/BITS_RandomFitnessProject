@@ -72,6 +72,27 @@ public class DatabaseIntake extends SQLiteOpenHelper {
 
     }
 
+    public boolean addOne(SettingsModel settingsModel) {
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+
+        cv.put(COLUMN_FIRST_NAME, settingsModel.getFirstName());
+        cv.put(COLUMN_LAST_NAME, settingsModel.getLastName());
+        cv.put(COLUMN_AGE, settingsModel.getAge());
+        cv.put(COLUMN_HEIGHT_UNITS, settingsModel.getHeightUnit());
+        cv.put(COLUMN_WEIGHT_UNITS, settingsModel.getWeightUnit());
+
+        long insert = db.insert(SETTINGS, null, cv);
+        if (insert == -1) {
+            return false;
+        }
+        else {
+            return true;
+        }
+
+    }
+
 
 
     // displaying db items in list

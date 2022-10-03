@@ -39,6 +39,7 @@ public class DatabaseIntake extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         String createIntakeTableStatement = "CREATE TABLE " + DIET_INTAKE + " (" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_DATE + " TEXT, " + COLUMN_BREAKFAST + " INT, " + COLUMN_LUNCH + " INT, " + COLUMN_DINNER + " INT, " + COLUMN_SNACKS + " INT)";
         String createSettingsTableStatement = "CREATE TABLE " + SETTINGS + " (" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_FIRST_NAME + " TEXT, " + COLUMN_LAST_NAME + " TEXT, " + COLUMN_AGE + " INT, " + COLUMN_HEIGHT_UNITS + " INT, " + COLUMN_WEIGHT_UNITS + " INT)";
+        // exercise table to  be filled with relevant fields
         String createExerciseTableStatement = "CREATE TABLE " + EXERCISE + " (" + COLUMN_ID +  " INTEGER PRIMARY KEY AUTOINCREMENT)";
 
         db.execSQL(createIntakeTableStatement);

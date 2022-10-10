@@ -5,23 +5,21 @@ public class SettingsModel {
     private String firstName;
     private String lastName;
     private int age;
-    private int heightUnit;
-    private int weightUnit;
+    private int measurementUnit;
     private int energyUnit;
     private double height;
     private double weight;
     private double bmi;
     private double goal;
     private int rate;
-    private int maintenance;
-    private int budget;
+    private double maintenance;
+    private double budget;
 
-    public SettingsModel(String firstName, String lastName, int age, int heightUnit, int weightUnit, int energyUnit, double height, double weight, double bmi, double goal, int rate, int maintenance, int budget) {
+    public SettingsModel(String firstName, String lastName, int age, int measurementUnit, int energyUnit, double height, double weight, double bmi, double goal, int rate, double maintenance, double budget) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
-        this.heightUnit = heightUnit;
-        this.weightUnit = weightUnit;
+        this.measurementUnit = measurementUnit;
         this.energyUnit = energyUnit;
         this.height = height;
         this.weight = weight;
@@ -56,20 +54,12 @@ public class SettingsModel {
         this.age = age;
     }
 
-    public int getHeightUnit() {
-        return heightUnit;
+    public int getMeasurementUnit() {
+        return measurementUnit;
     }
 
-    public void setHeightUnit(int heightUnit) {
-        this.heightUnit = heightUnit;
-    }
-
-    public int getWeightUnit() {
-        return weightUnit;
-    }
-
-    public void setWeightUnit(int weightUnit) {
-        this.weightUnit = weightUnit;
+    public void setMeasurementUnit(int measurementUnit) {
+        this.measurementUnit = measurementUnit;
     }
 
     public int getEnergyUnit() {
@@ -120,7 +110,7 @@ public class SettingsModel {
         this.rate = rate;
     }
 
-    public int getMaintenance() {
+    public double getMaintenance() {
         return maintenance;
     }
 
@@ -128,7 +118,7 @@ public class SettingsModel {
         this.maintenance = maintenance;
     }
 
-    public int getBudget() {
+    public double getBudget() {
         return budget;
     }
 

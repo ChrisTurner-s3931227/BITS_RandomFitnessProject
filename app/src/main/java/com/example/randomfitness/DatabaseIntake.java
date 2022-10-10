@@ -47,7 +47,7 @@ public class DatabaseIntake extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         String createIntakeTableStatement = "CREATE TABLE " + DIET_INTAKE + " (" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_DATE + " TEXT, " + COLUMN_BREAKFAST + " INT, " + COLUMN_LUNCH + " INT, " + COLUMN_DINNER + " INT, " + COLUMN_SNACKS + " INT, " + COLUMN_DAILY + " INT)";
-        String createSettingsTableStatement = "CREATE TABLE " + SETTINGS + " (" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_FIRST_NAME + " TEXT, " + COLUMN_LAST_NAME + " TEXT, " + COLUMN_AGE + " INT, " + COLUMN_HEIGHT_UNITS + " INT, " + COLUMN_WEIGHT_UNITS + " INT, " + COLUMN_ENERGY_UNITS + " INT, " + COLUMN_HEIGHT + " REAL, " + COLUMN_WEIGHT + " REAL, " + COLUMN_BMI + " REAL, " + COLUMN_GOAL + " REAL, " + COLUMN_RATE + " INT, " + COLUMN_MAINTENANCE + " INT, " + COLUMN_BUDGET + " INT)";
+        String createSettingsTableStatement = "CREATE TABLE " + SETTINGS + " (" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_FIRST_NAME + " TEXT, " + COLUMN_LAST_NAME + " TEXT, " + COLUMN_AGE + " INT, " + COLUMN_HEIGHT_UNITS + " INT, " + COLUMN_WEIGHT_UNITS + " INT, " + COLUMN_ENERGY_UNITS + " INT, " + COLUMN_HEIGHT + " REAL, " + COLUMN_WEIGHT + " REAL, " + COLUMN_BMI + " REAL, " + COLUMN_GOAL + " REAL, " + COLUMN_RATE + " INT, " + COLUMN_MAINTENANCE + " REAL, " + COLUMN_BUDGET + " REAL)";
         // exercise table to  be filled with relevant fields
         String createExerciseTableStatement = "CREATE TABLE " + EXERCISE + " (" + COLUMN_ID +  " INTEGER PRIMARY KEY AUTOINCREMENT)";
 
@@ -90,9 +90,15 @@ public class DatabaseIntake extends SQLiteOpenHelper {
         cv.put(COLUMN_FIRST_NAME, settingsModel.getFirstName());
         cv.put(COLUMN_LAST_NAME, settingsModel.getLastName());
         cv.put(COLUMN_AGE, settingsModel.getAge());
-        cv.put(COLUMN_HEIGHT_UNITS, settingsModel.getHeightUnit());
-        cv.put(COLUMN_WEIGHT_UNITS, settingsModel.getWeightUnit());
+        cv.put(COLUMN_HEIGHT_UNITS, settingsModel.getMeasurementUnit());
         cv.put(COLUMN_ENERGY_UNITS, settingsModel.getEnergyUnit());
+        cv.put(COLUMN_HEIGHT, settingsModel.getHeight());
+        cv.put(COLUMN_WEIGHT, settingsModel.getWeight());
+        cv.put(COLUMN_BMI, settingsModel.getBmi());
+        cv.put(COLUMN_GOAL, settingsModel.getGoal());
+        cv.put(COLUMN_RATE, settingsModel.getRate());
+        cv.put(COLUMN_MAINTENANCE, settingsModel.getMaintenance());
+        cv.put(COLUMN_BUDGET, settingsModel.getBudget());
 
         long insert = db.insert(SETTINGS, null, cv);
         if (insert == -1) {

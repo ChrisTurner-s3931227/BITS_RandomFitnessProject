@@ -6,14 +6,16 @@ public class IntakeModel {
     private int lunch;
     private int dinner;
     private int snacks;
+    private int daily;
 
     // constructors
 
-    public IntakeModel(int breakfast, int lunch, int dinner, int snacks) {
+    public IntakeModel(int breakfast, int lunch, int dinner, int snacks, int daily) {
         this.breakfast = breakfast;
         this.lunch = lunch;
         this.dinner = dinner;
         this.snacks = snacks;
+        this.daily = daily;
     }
 
     public IntakeModel() {
@@ -63,5 +65,11 @@ public class IntakeModel {
 
     public void setSnacks(int snacks) {
         this.snacks = snacks;
+    }
+
+    public int getDaily() { return daily; }
+
+    public void setDaily(int daily) {
+        this.daily = daily;
     }
 }

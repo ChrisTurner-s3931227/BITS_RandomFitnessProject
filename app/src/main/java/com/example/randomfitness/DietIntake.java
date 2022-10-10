@@ -54,15 +54,18 @@ public class DietIntake extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                int daily = Integer.valueOf(breakfast.getText().toString()) + Integer.valueOf(lunch.getText().toString()) + Integer.valueOf(dinner.getText().toString()) + Integer.valueOf(snacks.getText().toString());
+                intake.setText("Daily Intake: " + daily);
+
                 IntakeModel intakeModel;
 
                 try {
-                    intakeModel = new IntakeModel(Integer.parseInt(breakfast.getText().toString()), Integer.parseInt(lunch.getText().toString()), Integer.parseInt(dinner.getText().toString()), Integer.parseInt(snacks.getText().toString()));
+                    intakeModel = new IntakeModel(Integer.parseInt(breakfast.getText().toString()), Integer.parseInt(lunch.getText().toString()), Integer.parseInt(dinner.getText().toString()), Integer.parseInt(snacks.getText().toString()), daily);
                     Toast.makeText(DietIntake.this, intakeModel.toString(), Toast.LENGTH_SHORT).show();
                 }
                 catch (Exception e) {
                     Toast.makeText(DietIntake.this, "Error creating intake", Toast.LENGTH_SHORT).show();
-                    intakeModel = new IntakeModel(-1, -1, -1, -1);
+                    intakeModel = new IntakeModel(-1, -1, -1, -1, -1);
                 }
 
                 DatabaseIntake databaseIntake = new DatabaseIntake(DietIntake.this);
@@ -98,7 +101,7 @@ public class DietIntake extends AppCompatActivity {
     //}
 
     public void goToDietSettings (View view){
-        Intent intent = new Intent (this, DietSettings.class);
+        Intent intent = new Intent (this, StepCounter.class);
         startActivity(intent);
     }
 }

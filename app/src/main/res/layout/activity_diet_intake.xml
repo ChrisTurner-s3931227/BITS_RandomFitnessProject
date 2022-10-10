@@ -99,7 +99,7 @@
         android:layout_marginBottom="16dp"
         android:backgroundTint="#000000"
         android:onClick="goToDietSettings"
-        android:text="@string/settings"
+        android:text="Return to Main"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

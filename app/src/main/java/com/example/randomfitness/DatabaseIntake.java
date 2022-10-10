@@ -19,6 +19,7 @@ public class DatabaseIntake extends SQLiteOpenHelper {
     public static final String COLUMN_LUNCH = "LUNCH";
     public static final String COLUMN_DINNER = "DINNER";
     public static final String COLUMN_SNACKS = "SNACKS";
+    public static final String COLUMN_DAILY = "DAILY_INTAKE";
     public static final String COLUMN_ID = "ID";
 
     public static final String SETTINGS = "SETTINGS";
@@ -27,6 +28,7 @@ public class DatabaseIntake extends SQLiteOpenHelper {
     public static final String COLUMN_AGE = "AGE";
     public static final String COLUMN_HEIGHT_UNITS = "HEIGHT_UNITS";
     public static final String COLUMN_WEIGHT_UNITS = "WEIGHT_UNITS";
+    public static final String COLUMN_ENERGY_UNITS = "ENERGY_UNITS";
 
     public static final String EXERCISE = "EXERCISE";
 
@@ -37,8 +39,8 @@ public class DatabaseIntake extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String createIntakeTableStatement = "CREATE TABLE " + DIET_INTAKE + " (" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_DATE + " TEXT, " + COLUMN_BREAKFAST + " INT, " + COLUMN_LUNCH + " INT, " + COLUMN_DINNER + " INT, " + COLUMN_SNACKS + " INT)";
-        String createSettingsTableStatement = "CREATE TABLE " + SETTINGS + " (" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_FIRST_NAME + " TEXT, " + COLUMN_LAST_NAME + " TEXT, " + COLUMN_AGE + " INT, " + COLUMN_HEIGHT_UNITS + " INT, " + COLUMN_WEIGHT_UNITS + " INT)";
+        String createIntakeTableStatement = "CREATE TABLE " + DIET_INTAKE + " (" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_DATE + " TEXT, " + COLUMN_BREAKFAST + " INT, " + COLUMN_LUNCH + " INT, " + COLUMN_DINNER + " INT, " + COLUMN_SNACKS + " INT, " + COLUMN_DAILY + " INT)";
+        String createSettingsTableStatement = "CREATE TABLE " + SETTINGS + " (" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_FIRST_NAME + " TEXT, " + COLUMN_LAST_NAME + " TEXT, " + COLUMN_AGE + " INT, " + COLUMN_HEIGHT_UNITS + " INT, " + COLUMN_WEIGHT_UNITS + " INT, " + COLUMN_ENERGY_UNITS + " INT)";
         // exercise table to  be filled with relevant fields
         String createExerciseTableStatement = "CREATE TABLE " + EXERCISE + " (" + COLUMN_ID +  " INTEGER PRIMARY KEY AUTOINCREMENT)";
 
@@ -61,6 +63,7 @@ public class DatabaseIntake extends SQLiteOpenHelper {
         cv.put(COLUMN_LUNCH, intakeModel.getLunch());
         cv.put(COLUMN_DINNER, intakeModel.getDinner());
         cv.put(COLUMN_SNACKS, intakeModel.getSnacks());
+        cv.put(COLUMN_DAILY, intakeModel.getDaily());
 
         long insert = db.insert(DIET_INTAKE, null, cv);
         if (insert == -1) {
@@ -82,6 +85,7 @@ public class DatabaseIntake extends SQLiteOpenHelper {
         cv.put(COLUMN_AGE, settingsModel.getAge());
         cv.put(COLUMN_HEIGHT_UNITS, settingsModel.getHeightUnit());
         cv.put(COLUMN_WEIGHT_UNITS, settingsModel.getWeightUnit());
+        cv.put(COLUMN_ENERGY_UNITS, settingsModel.getEnergyUnit());
 
         long insert = db.insert(SETTINGS, null, cv);
         if (insert == -1) {
@@ -107,12 +111,13 @@ public class DatabaseIntake extends SQLiteOpenHelper {
 
         if (cursor.moveToFirst()) {
             do {
-                int breakfast = cursor.getInt(1);
-                int lunch = cursor.getInt(2);
-                int dinner = cursor.getInt(3);
-                int snacks = cursor.getInt(4);
+                int breakfast = cursor.getInt(2);
+                int lunch = cursor.getInt(3);
+                int dinner = cursor.getInt(4);
+                int snacks = cursor.getInt(5);
+                int daily = cursor.getInt(6);
 
-                IntakeModel newIntake = new IntakeModel(breakfast, lunch, dinner, snacks);
+                IntakeModel newIntake = new IntakeModel(breakfast, lunch, dinner, snacks, daily);
                 returnlist.add(newIntake);
 
             } while (cursor.moveToNext());

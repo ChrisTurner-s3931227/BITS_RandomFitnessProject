@@ -7,6 +7,7 @@ public class SettingsModel {
     private int age;
     private int heightUnit;
     private int weightUnit;
+    private int energyUnit;
 
     // constructors
 
@@ -16,6 +17,7 @@ public class SettingsModel {
         this.age = age;
         this.heightUnit = heightUnit;
         this.weightUnit = weightUnit;
+        this.energyUnit = energyUnit;
     }
 
     public SettingsModel () {
@@ -61,5 +63,13 @@ public class SettingsModel {
 
     public void setWeightUnit(int weightUnit) {
         this.weightUnit = weightUnit;
+    }
+
+    public int getEnergyUnit() {
+        return energyUnit;
+    }
+
+    public void setEnergyUnit(int energyUnit) {
+        this.energyUnit = energyUnit;
     }
 }

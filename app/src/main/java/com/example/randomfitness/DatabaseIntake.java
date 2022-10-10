@@ -146,4 +146,18 @@ public class DatabaseIntake extends SQLiteOpenHelper {
 
     }
 
+    public Double setGoal() {
+        String queryGoal = "SELECT GOAL FROM SETTINGS ORDER BY ID DESC LIMIT 1";
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor cursor = db.rawQuery(queryGoal, null);
+
+        if (cursor != null) {
+            cursor.moveToFirst();
+            Double goal = cursor.getDouble(0);
+            return goal;
+        }
+        return null;
+    }
+
 }

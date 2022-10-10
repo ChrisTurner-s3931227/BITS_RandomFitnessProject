@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
@@ -25,6 +27,7 @@ public class DietIntake extends AppCompatActivity {
     EditText snacks;
 
     TextView intake;
+    TextView goal;
 
     ListView testlist;
 
@@ -45,11 +48,14 @@ public class DietIntake extends AppCompatActivity {
         snacks = (EditText) findViewById(R.id.snacktext);
 
         intake = (TextView) findViewById(R.id.dailytotaltextView);
+        goal = (TextView) findViewById(R.id.comparisontextView);
 
         testlist = (ListView) findViewById(R.id.testlist);
 
         Button logintake = (Button) findViewById(R.id.intakebutton);
         Button viewlist = (Button) findViewById(R.id.viewlistbutton);
+
+
 
         logintake.setOnClickListener(new View.OnClickListener() {
             @Override

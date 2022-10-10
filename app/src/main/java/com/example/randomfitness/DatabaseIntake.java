@@ -47,7 +47,7 @@ public class DatabaseIntake extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         String createIntakeTableStatement = "CREATE TABLE " + DIET_INTAKE + " (" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_DATE + " TEXT, " + COLUMN_BREAKFAST + " INT, " + COLUMN_LUNCH + " INT, " + COLUMN_DINNER + " INT, " + COLUMN_SNACKS + " INT, " + COLUMN_DAILY + " INT)";
-        String createSettingsTableStatement = "CREATE TABLE " + SETTINGS + " (" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_FIRST_NAME + " TEXT, " + COLUMN_LAST_NAME + " TEXT, " + COLUMN_AGE + " INT, " + COLUMN_HEIGHT_UNITS + " INT, " + COLUMN_WEIGHT_UNITS + " INT, " + COLUMN_ENERGY_UNITS + " INT, " + COLUMN_HEIGHT + " INT, " + COLUMN_WEIGHT + " INT, " + COLUMN_BMI + " INT, " + COLUMN_GOAL + " INT, " + COLUMN_RATE + " INT, " + COLUMN_MAINTENANCE + " INT, " + COLUMN_BUDGET + " INT)";
+        String createSettingsTableStatement = "CREATE TABLE " + SETTINGS + " (" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_FIRST_NAME + " TEXT, " + COLUMN_LAST_NAME + " TEXT, " + COLUMN_AGE + " INT, " + COLUMN_HEIGHT_UNITS + " INT, " + COLUMN_WEIGHT_UNITS + " INT, " + COLUMN_ENERGY_UNITS + " INT, " + COLUMN_HEIGHT + " REAL, " + COLUMN_WEIGHT + " REAL, " + COLUMN_BMI + " REAL, " + COLUMN_GOAL + " REAL, " + COLUMN_RATE + " INT, " + COLUMN_MAINTENANCE + " INT, " + COLUMN_BUDGET + " INT)";
         // exercise table to  be filled with relevant fields
         String createExerciseTableStatement = "CREATE TABLE " + EXERCISE + " (" + COLUMN_ID +  " INTEGER PRIMARY KEY AUTOINCREMENT)";
 

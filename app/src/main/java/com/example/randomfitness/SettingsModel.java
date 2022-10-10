@@ -8,15 +8,15 @@ public class SettingsModel {
     private int heightUnit;
     private int weightUnit;
     private int energyUnit;
-    private int height;
-    private int weight;
-    private int bmi;
-    private int goal;
+    private double height;
+    private double weight;
+    private double bmi;
+    private double goal;
     private int rate;
     private int maintenance;
     private int budget;
 
-    public SettingsModel(String firstName, String lastName, int age, int heightUnit, int weightUnit, int energyUnit, int height, int weight, int bmi, int goal, int rate, int maintenance, int budget) {
+    public SettingsModel(String firstName, String lastName, int age, int heightUnit, int weightUnit, int energyUnit, double height, double weight, double bmi, double goal, int rate, int maintenance, int budget) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
@@ -80,35 +80,35 @@ public class SettingsModel {
         this.energyUnit = energyUnit;
     }
 
-    public int getHeight() {
+    public double getHeight() {
         return height;
     }
 
-    public void setHeight(int height) {
+    public void setHeight(double height) {
         this.height = height;
     }
 
-    public int getWeight() {
+    public double getWeight() {
         return weight;
     }
 
-    public void setWeight(int weight) {
+    public void setWeight(double weight) {
         this.weight = weight;
     }
 
-    public int getBmi() {
+    public double getBmi() {
         return bmi;
     }
 
-    public void setBmi(int bmi) {
+    public void setBmi(double bmi) {
         this.bmi = bmi;
     }
 
-    public int getGoal() {
+    public double getGoal() {
         return goal;
     }
 
-    public void setGoal(int goal) {
+    public void setGoal(double goal) {
         this.goal = goal;
     }
 

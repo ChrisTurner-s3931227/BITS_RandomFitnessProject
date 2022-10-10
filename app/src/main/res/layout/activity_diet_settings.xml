@@ -12,24 +12,6 @@
         android:layout_height="match_parent">
 
         <Switch
-            android:id="@+id/weightswitch"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:showText="true"
-            android:splitTrack="false"
-            android:text="Prefered Weight Units:"
-            android:textOff="kg"
-            android:textOn="lb"
-            android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/heightswitch" />
-
-        <Switch
             android:id="@+id/energyswitch"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -45,7 +27,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/weightswitch" />
+            app:layout_constraintTop_toBottomOf="@+id/measurementswitch" />
 
         <Button
             android:id="@+id/logbutton"
@@ -84,31 +66,31 @@
         app:layout_constraintBaseline_toBaselineOf="@+id/textfirstname"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <EditText
-        android:id="@+id/textfirstname"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="@string/firstname"
-        android:inputType="number"
-        android:minHeight="48dp"
-        android:textColorHint="#616161"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <EditText
+            android:id="@+id/textfirstname"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="@string/firstname"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:textColorHint="#616161"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/textlastname"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="@string/lastname"
-        android:inputType="number"
-        android:minHeight="48dp"
-        android:textColorHint="#616161"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textfirstname" />
+        <EditText
+            android:id="@+id/textlastname"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="@string/lastname"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:textColorHint="#616161"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textfirstname" />
 
     <TextView
         android:id="@+id/goaltextview"
@@ -276,7 +258,7 @@
         app:layout_constraintTop_toBottomOf="@+id/goalweighttext" />
 
         <Switch
-            android:id="@+id/heightswitch"
+            android:id="@+id/measurementswitch"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -284,9 +266,9 @@
             android:layout_marginEnd="16dp"
             android:showText="true"
             android:splitTrack="false"
-            android:text="Prefered Height Units:"
-            android:textOff="cm"
-            android:textOn="in"
+            android:text="Prefered Units:"
+            android:textOff="metric"
+            android:textOn="imperial"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

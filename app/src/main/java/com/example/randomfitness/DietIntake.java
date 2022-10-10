@@ -14,6 +14,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Calendar;
 import java.util.List;
 
 public class DietIntake extends AppCompatActivity {
@@ -90,15 +91,6 @@ public class DietIntake extends AppCompatActivity {
         });
 
     }
-
-    // private void dailyintake() {
-    //    double breakfastintake = Double.valueOf(breakfast.getText().toString());
-    //    double lunchintake = Double.valueOf(lunch.getText().toString());
-    //    double dinnerintake = Double.valueOf(dinner.getText().toString());
-    //    double snackintake = Double.valueOf(snacks.getText().toString());
-    //    double result = breakfastintake + lunchintake + dinnerintake + snackintake;
-    //    intake.setText("Daily Intake: " + Math.round(result));
-    //}
 
     public void goToDietSettings (View view){
         Intent intent = new Intent (this, StepCounter.class);

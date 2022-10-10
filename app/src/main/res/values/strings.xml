@@ -12,12 +12,15 @@
     <string name="sc_btn_diet">Dieting</string>
     <string name="sc_btn_calorie">Calorie Tracker</string>
     <string name="sc_txt_distance">0.00km</string>
-    <string name="ft_txt_Hello">Hello and welcome to Ranom FItness. What is your name?</string>
+    <string name="ft_txt_Hello">Hello and welcome to Random Fitness. What is your name?</string>
     <string name="ft_txt_enterName">Your name here</string>
     <string name="btn_Begin">Begin</string>
 
     <string name="initialweight">Please Enter Weight</string>
     <string name="height">Please Enter Height</string>
+    <string name="age">Please Enter Age</string>
+    <string name="firstname">Please Enter First Name</string>
+    <string name="lastname">Please Enter Surname</string>
     <string name="logbutton">Log</string>
     <string name="bmi">BMI:</string>
     <string name="goalweight">Please Enter Goal Weight</string>

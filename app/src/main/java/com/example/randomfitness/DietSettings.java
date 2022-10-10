@@ -42,9 +42,7 @@ public class DietSettings extends AppCompatActivity {
         weightinput = (EditText) findViewById(R.id.textinitialweight);
         goalinput = (EditText) findViewById(R.id.goalweighttext);
 
-        Button logheight = (Button) findViewById(R.id.heightbutton);
-        Button logweight = (Button) findViewById(R.id.initialweightbutton);
-        Button loggoal = (Button) findViewById(R.id.goalweightbutton);
+        Button log = (Button) findViewById(R.id.logbutton);
 
         bmiresult = (TextView) findViewById(R.id.bmitext);
         maintenanceresult = (TextView) findViewById(R.id.maintenancetext);
@@ -52,23 +50,11 @@ public class DietSettings extends AppCompatActivity {
 
         spinner = (Spinner) findViewById(R.id.weightratespinner);
 
-        logheight.setOnClickListener(new View.OnClickListener() {
+        log.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                bmiCalculation();
-            }
-        });
 
-        logweight.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
                 bmiCalculation();
-            }
-        });
-
-        loggoal.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
                 maintenanceCalculation();
             }
         });
@@ -164,11 +150,6 @@ public class DietSettings extends AppCompatActivity {
             double result = (1086 - (10.1 * age) + (13.7 * weight) + (416 * (height / 100))) * 4.184;
             maintenanceresult.setText("Weight Maintenance kJ: " + Math.round(result));
         }
-    }
-
-    public void goToDietIntake (View view){
-        Intent intent = new Intent (this, DietIntake.class);
-        startActivity(intent);
     }
 
     public void goToStepCounter (View view){
